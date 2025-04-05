@@ -18,3 +18,19 @@ void setup() {
   lcd.begin(16, 2);
   gate.attach(A2);
 }
+
+void setup() {
+  lcd.begin(16, 2);
+  gate.attach(A2);
+
+  pinMode(ir1, INPUT);
+  pinMode(ir2, INPUT);
+  pinMode(ir3, INPUT);
+  pinMode(ir4, INPUT);
+  pinMode(ir_enter, INPUT);
+  pinMode(ir_exit, INPUT);
+  pinMode(flame_sensor, INPUT);
+  pinMode(buzzer, OUTPUT);
+
+  gate.write(0);
+}
