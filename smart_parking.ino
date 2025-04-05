@@ -64,5 +64,15 @@ void loop() {
   lcd.setCursor(0, 1);
   lcd.print("TOTAL:");
   lcd.print(totalSlot);
+  if (digitalRead(ir_enter) == 0) {
+    if (totalSlot - slot > 0) {
+      gate.write(90);
+      delay(2000);
+      gate.write(0);
+    } else {
+      lcd.setCursor(0, 0);
+      lcd.print("PARKING FULL");
+    }
+  }
 
 }
