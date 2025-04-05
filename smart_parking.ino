@@ -32,4 +32,14 @@ void setup() {
   pinMode(buzzer, OUTPUT);
 
   gate.write(0); // Gate closed
+  void welcomeMessage() {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(" Smart Parking ");
+  lcd.setCursor(0, 1);
+  lcd.print("System Started");
+  delay(2000);
+  lcd.clear();
+}
+
 }
