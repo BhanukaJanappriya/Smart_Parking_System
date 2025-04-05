@@ -34,3 +34,13 @@ void setup() {
 
   gate.write(0);
 }
+void loop() {
+  int flame = digitalRead(flame_sensor);
+  if (flame == 1) {
+    digitalWrite(buzzer, HIGH);
+    lcd.setCursor(0, 0);
+    lcd.print("FIRE");
+  } else {
+    digitalWrite(buzzer, LOW);
+  }
+}
