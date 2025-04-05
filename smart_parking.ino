@@ -18,3 +18,18 @@ const int flameSensor = A0;
 const int buzzer = A1;
 
 int totalSlots = 4;
+void setup() {
+  lcd.begin(16, 2);
+  gate.attach(A2);
+
+  pinMode(ir1, INPUT);
+  pinMode(ir2, INPUT);
+  pinMode(ir3, INPUT);
+  pinMode(ir4, INPUT);
+  pinMode(irEnter, INPUT);
+  pinMode(irExit, INPUT);
+  pinMode(flameSensor, INPUT);
+  pinMode(buzzer, OUTPUT);
+
+  gate.write(0); // Gate closed
+}
