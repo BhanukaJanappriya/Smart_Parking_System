@@ -43,4 +43,26 @@ void loop() {
   } else {
     digitalWrite(buzzer, LOW);
   }
+
+    int slot = 0;
+  if (digitalRead(ir1) == 0) {
+    slot++;
+  }
+  if (digitalRead(ir2) == 0) {
+    slot++;
+  }
+  if (digitalRead(ir3) == 0) {
+    slot++;
+  }
+  if (digitalRead(ir4) == 0) {
+    slot++;
+  }
+
+  lcd.setCursor(0, 0);
+  lcd.print("SLOT:");
+  lcd.print(totalSlot - slot);
+  lcd.setCursor(0, 1);
+  lcd.print("TOTAL:");
+  lcd.print(totalSlot);
+
 }
